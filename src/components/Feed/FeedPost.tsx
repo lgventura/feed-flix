@@ -55,7 +55,6 @@ const FeedPost: React.FC<FeedPostProps> = ({
 
   return (
     <article className="bg-white border border-instagram-border rounded-lg overflow-hidden mb-6">
-      {/* Header */}
       <div className="flex items-center justify-between px-4 py-3.5">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center">
@@ -73,7 +72,6 @@ const FeedPost: React.FC<FeedPostProps> = ({
         </button>
       </div>
 
-      {/* Image */}
       <div className="w-full max-h-[750px] overflow-hidden bg-black">
         <img
           src={backdropUrl}
@@ -85,7 +83,6 @@ const FeedPost: React.FC<FeedPostProps> = ({
         />
       </div>
 
-      {/* Actions */}
       <div className="flex justify-between items-center px-4 py-1.5">
         <div className="flex gap-4">
           <button
@@ -115,14 +112,12 @@ const FeedPost: React.FC<FeedPostProps> = ({
         </button>
       </div>
 
-      {/* Likes */}
       <div className="px-4 mb-2">
         <span className="text-sm font-semibold text-instagram-text">
           {isLiked ? "You " : ""}liked this
         </span>
       </div>
 
-      {/* Description */}
       <div className="px-4 mb-2 text-sm leading-[18px] text-instagram-text">
         <span className="font-semibold mr-1.5">TMDB Official</span>
         <span className="whitespace-pre-wrap break-words">
@@ -138,7 +133,6 @@ const FeedPost: React.FC<FeedPostProps> = ({
         </span>
       </div>
 
-      {/* Movie Info */}
       <div className="px-4 mb-2 flex gap-4 text-[13px]">
         <span className="text-instagram-text font-medium">
           ⭐ {movie.vote_average.toFixed(1)}
@@ -148,7 +142,6 @@ const FeedPost: React.FC<FeedPostProps> = ({
         </span>
       </div>
 
-      {/* Timestamp */}
       <div className="px-4 pb-4">
         <time className="text-[10px] text-instagram-secondary uppercase tracking-wide">
           {formatDate(movie.release_date)}
