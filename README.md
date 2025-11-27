@@ -1,46 +1,132 @@
-# Getting Started with Create React App
+# FeedFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple movie listing application designed as an Instagram-inspired feed. Built with React and TypeScript, this project consumes the TMDB (The Movie Database) public API to display movies in a social media feed format.
 
-## Available Scripts
+## About the Project
 
-In the project directory, you can run:
+FeedFlix is a movie browsing application that presents films in a familiar social media feed layout. Users can interact with movie posts through likes and saves, creating a personalized collection of their favorite films.
 
-### `npm start`
+### Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Instagram-style feed layout for movie listings
+- Like functionality for individual movie posts
+- Save movies to a personal collection
+- Header navigation between Home and Saved posts
+- Footer navigation for page browsing
+- Responsive design for mobile and desktop
+- Persistent data storage using localStorage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+### Core Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 18
+- TypeScript
+- Axios for API requests
 
-### `npm run build`
+### Styling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Tailwind CSS 3
+- Custom Instagram-inspired color palette
+- Responsive utility classes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Icons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Lucide React
+- Tree-shakeable icon components
 
-### `npm run eject`
+### API
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- TMDB (The Movie Database) API
+- Movie data and poster images
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Header**: Navigation component for switching between Home and Saved posts
+- **Feed**: Main container displaying movie posts
+- **FeedPost**: Individual movie card with like, comment, share, and save actions
+- **Footer**: Fixed bottom navigation for pagination controls
+- **Services**: API integration and movie data management
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/lgventura/feed-flix.git
+cd feed-flix
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+### Running the Application
+
+Start the development server:
+
+```bash
+npm start
+```
+
+The application will open at [http://localhost:3000](http://localhost:3000)
+
+### Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
+
+## Features in Detail
+
+### Home Feed
+
+- Displays movies currently playing in theaters
+- Paginated results with navigation controls
+- Each post shows movie poster, title, rating, and description
+- Interactive like and save buttons
+
+### Saved Posts
+
+- Personal collection of saved movies
+- Persisted across browser sessions
+- Quick access through header navigation
+
+### Pagination
+
+- Footer-based navigation controls
+- Previous and Next buttons
+- Current page indicator
+- Automatic scroll to top on page change
+
+## API Configuration
+
+This project uses the TMDB API. The API key is configured in the service layer at:
+
+```
+src/services/movieService.ts
+```
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React Documentation](https://reactjs.org/)
+- [TypeScript Documentation](https://www.typescriptlang.org/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/)
+- [TMDB API Documentation](https://developers.themoviedb.org/3)
